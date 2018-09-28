@@ -2,7 +2,7 @@
 
 Added any text into the input and it will generate a QR code for each line of text.
 
-Commas result in line breaks in the text of the code.
+Commas result in line breaks in the text under the code.
 
 Example:
 ``` 

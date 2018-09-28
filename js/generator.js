@@ -41,21 +41,21 @@ function redrawQrCode(canvas,text) {
 
 	canvas.style.display = "none";
 
-	var ecl = qrcodegen.QrCode.Ecc.MEDIUM;//getInputErrorCorrectionLevel();
+	var ecl = qrcodegen.QrCode.Ecc.MEDIUM;
 	
 	var segs = qrcodegen.QrSegment.makeSegments(text);
-	var minVer = 1;//parseInt(document.getElementById("version-min-input").value, 10);
-	var maxVer = 40;//parseInt(document.getElementById("version-max-input").value, 10);
-	var mask = -1;//parseInt(document.getElementById("mask-input").value, 10);
-	var boostEcc = true;//document.getElementById("boost-ecc-input").checked;
+	var minVer = 1;
+	var maxVer = 40;
+	var mask = -1;
+	var boostEcc = true;
 	var qr = qrcodegen.QrCode.encodeSegments(segs, ecl, minVer, maxVer, mask, boostEcc);
 	
 	// Draw image output
-	var border = 0;//parseInt(document.getElementById("border-input").value, 10);
+	var border = 0;
 	if (border < 0 || border > 100)
 		return;
 
-		var scale = 8;//parseInt(document.getElementById("scale-input").value, 10);
+		var scale = 8;
 		if (scale <= 0 || scale > 30)
 			return;
 		qr.drawCanvas(scale, border, canvas);
