@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>QR Code generator library demo (JavaScript)</title>
+	<style type="text/css">
+	html {
+		font-family: sans-serif;
+	}
+	td {
+		vertical-align: top;
+		padding-top: 0.2em;
+		padding-bottom: 0.2em;
+	}
+	td:first-child {
+		white-space: pre;
+	}
+	input[type=radio] + label, input[type=checkbox] + label {
+		margin-left: 0.1em;
+		margin-right: 0.7em;
+	}
+	.qr-canvas{
+		padding:1em; 
+		background-color:#E8E8E8;
+	}
+	.canvas-wrapper{
+		float:left;
+		margin-right:40px;
+	}
+	</style>
+</head>
+
+<body>
+<form action="#" method="get" onsubmit="return false;">
+	<div>
+		<strong>Text string:</strong><br/>
+		<textarea placeholder="Enter your text to be put into the QR Code each line makes a new code." id="text-input" style="width:100%; max-width:30em; height:15em; font-family:inherit"></textarea>
+		<p><button onClick="generateQR()">Generate</button></p>
+	</div>
+	<div id="all-codes"></div>
+</form>
+<script type="application/javascript" src="qrcodegen.js"></script>
+<script type="application/javascript" src="generator.js"></script>
+</body>
+</html>
